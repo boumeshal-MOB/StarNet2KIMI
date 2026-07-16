@@ -1,0 +1,26 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: BTM stateless topographic calculation Lambda
+
+Resources:
+  BtmTopographicCalculation:
+    Type: AWS::Serverless::Function
+    Metadata:
+      Dockerfile: Dockerfile.lambda
+      DockerContext: .
+      DockerTag: python3.12-v1
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      MemorySize: 2048
+      Timeout: 900
+      EphemeralStorage:
+        Size: 1024
+      Environment:
+        Variables:
+          BTM_TOPOGRAPHIC_CONTRACT_VERSION: btm.topographic-adjustment.lambda.v1
+
+Outputs:
+  FunctionName:
+    Value: !Ref BtmTopographicCalculation
