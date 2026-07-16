@@ -40,7 +40,8 @@ jobs:
         with:
           node-version: '20'
           cache: npm
-      - run: npm ci
+      - name: Install frontend dependencies like Vercel
+        run: npm install --no-audit --no-fund
       - name: Report existing lint debt
         continue-on-error: true
         run: npm run lint
