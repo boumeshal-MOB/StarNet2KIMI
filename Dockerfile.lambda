@@ -1,0 +1,12 @@
+# Stateless BTM calculation Lambda. The React/FastAPI demo is intentionally excluded.
+FROM public.ecr.aws/lambda/python:3.12
+
+COPY backend/requirements-lambda.txt ${LAMBDA_TASK_ROOT}/requirements.txt
+RUN pip install --no-cache-dir -r ${LAMBDA_TASK_ROOT}/requirements.txt --target ${LAMBDA_TASK_ROOT}
+
+COPY backend/core ${LAMBDA_TASK_ROOT}/core
+COPY backend/app/services/starnet ${LAMBDA_TASK_ROOT}/starnet
+COPY backend/lambda_app ${LAMBDA_TASK_ROOT}/lambda_app
+
+ENV PYTHONPATH="${LAMBDA_TASK_ROOT}/core:${LAMBDA_TASK_ROOT}"
+CMD ["lambda_app.handler.lambda_handler"]
