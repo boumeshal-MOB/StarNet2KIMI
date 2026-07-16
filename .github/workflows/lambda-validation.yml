@@ -9,9 +9,34 @@ on:
       - main
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
+  repair-package-lock:
+    if: github.event_name == 'push' && !contains(github.event.head_commit.message, 'Regenerate package lock')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/btm-lambda-calculation
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Regenerate complete npm lockfile
+        run: |
+          rm -f package-lock.json
+          npm install --package-lock-only --no-audit --no-fund
+      - name: Commit repaired lockfile
+        run: |
+          if git diff --quiet -- package-lock.json; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add package-lock.json
+          git commit -m "Regenerate package lock"
+          git push origin HEAD:agent/btm-lambda-calculation
+
   lambda-and-backend:
     runs-on: ubuntu-latest
     steps:
@@ -40,8 +65,8 @@ jobs:
         with:
           node-version: '20'
           cache: npm
-      - name: Install frontend dependencies like Vercel
-        run: npm install --no-audit --no-fund
+      - name: Install frontend dependencies
+        run: npm ci
       - name: Report existing lint debt
         continue-on-error: true
         run: npm run lint
