@@ -25,7 +25,8 @@ app/
 │   └── components/           # NetworkMap (ellipses 95 %), badges, layout
 ├── Dockerfile                # Image démo full-stack : build frontend + uvicorn
 ├── Dockerfile.lambda         # Image AWS Lambda Python 3.12, sans FastAPI ni SQLite
-└── template.lambda.yaml      # Déploiement AWS SAM de la Lambda de calcul
+├── template.lambda.yaml      # Déploiement AWS SAM de la Lambda de calcul
+└── vercel.json               # Build Vite et réécriture SPA pour le frontend
 ```
 
 ## Lancer la maquette
@@ -38,6 +39,27 @@ docker build -t btm-topo . && docker run -p 8000:8000 btm-topo
 cd backend && pip install -r requirements.txt && uvicorn app.main:app --port 8000
 npm install && npm run dev        # proxy /api → :8000
 ```
+
+## Déployer le frontend sur Vercel
+
+Le build Vercel est configuré dans `vercel.json` :
+
+- framework : Vite ;
+- installation : `npm ci` ;
+- build : `npm run build` ;
+- sortie : `dist` ;
+- réécriture SPA vers `index.html`.
+
+Pour utiliser une API déployée séparément, définir dans Vercel :
+
+```text
+VITE_API_BASE_URL=https://votre-api-btm.example.com/api
+```
+
+Sans cette variable, le frontend appelle `/api` sur le même domaine. La Lambda de calcul ne
+remplace pas à elle seule toutes les routes CRUD de la maquette (`processings`, `versions`, `runs`,
+`audit`). Pour une application complète, Vercel doit pointer vers le backend BTM ou vers une API
+FastAPI/API Gateway fournissant ces routes et déclenchant la Lambda de calcul.
 
 ## Lambda de calcul BTM
 
