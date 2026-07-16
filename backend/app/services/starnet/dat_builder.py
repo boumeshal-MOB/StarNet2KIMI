@@ -73,7 +73,7 @@ def build_dat(
         by_station.setdefault(str(sight["station_id"]), []).append(sight)
 
     for station_id, station_sights in by_station.items():
-        lines.append(f"DB  {names.get(station_id, station_id)}")
+        lines.append(f"DB {names.get(station_id, station_id)}")
         for sight in station_sights:
             target = names.get(str(sight["target_id"]), str(sight["target_id"]))
             sigmas = sight.get("sigmas", {})
