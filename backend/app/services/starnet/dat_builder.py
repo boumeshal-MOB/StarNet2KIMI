@@ -88,9 +88,9 @@ def build_dat(
             hi = float(sight.get("instrument_height_m", 0.0))
             ht = float(sight.get("target_height_m", 0.0))
             lines.append(
-                f"DM {target} {_angle_dms(float(sight['hz_rad']))} "
-                f"{float(sight['slope_distance_m']):.5f} "
-                f"{_angle_dms(float(sight['vz_rad']))} {hi:.3f}/{ht:.3f}"
+                f"DM {target} {_angle_dms(float(sight['hz_rad']))}  "
+                f"{float(sight['slope_distance_m']):.5f}  "
+                f"{_angle_dms(float(sight['vz_rad']))}  {hi:.3f}/{ht:.3f}"
             )
         lines.extend(["DE", ""])
 
