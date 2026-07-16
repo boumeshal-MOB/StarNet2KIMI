@@ -1,0 +1,2826 @@
+{
+ "meta": {
+  "source": "synthetic generator (scripts/generate_ats35.py)",
+  "stations": [
+   "NTE_ATS35"
+  ],
+  "sharedReferences": [
+   "REF_329",
+   "REF_335",
+   "REF_341",
+   "REF_347",
+   "REF_360"
+  ],
+  "stationTruth": {
+   "e": 280498.0,
+   "n": 288548.0,
+   "h": 32.1,
+   "orientationRad": 0.35
+  },
+  "scenarios": {
+   "heldBackCycle": "2025-03-09T08:26:00.000Z",
+   "blunder": {
+    "cycle": "2025-03-09T16:26:00.000Z",
+    "target": "L35RE1100_341",
+    "sdAddedM": 0.008
+   },
+   "environmentGap": {
+    "from": "2025-03-09T12:00:00.000Z",
+    "to": "2025-03-09T16:00:00.000Z"
+   }
+  }
+ },
+ "rawObservations": [
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_329-22590000",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_329",
+   "epoch": "2025-03-09T00:30:30.034Z",
+   "recordNumber": 22590000,
+   "hzDeg": 111.90183,
+   "vzDeg": 90.9707,
+   "sdM": 81.4352
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_335-22590001",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_335",
+   "epoch": "2025-03-09T00:32:19.844Z",
+   "recordNumber": 22590001,
+   "hzDeg": 119.05277,
+   "vzDeg": 91.2463,
+   "sdM": 66.8298
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_341-22590002",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_341",
+   "epoch": "2025-03-09T00:28:01.643Z",
+   "recordNumber": 22590002,
+   "hzDeg": 130.91375,
+   "vzDeg": 91.64546,
+   "sdM": 52.9512
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_347-22590003",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_347",
+   "epoch": "2025-03-09T00:28:07.351Z",
+   "recordNumber": 22590003,
+   "hzDeg": 148.91082,
+   "vzDeg": 92.18801,
+   "sdM": 41.3523
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_360-22590004",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_360",
+   "epoch": "2025-03-09T00:32:19.634Z",
+   "recordNumber": 22590004,
+   "hzDeg": 203.9463,
+   "vzDeg": 92.31378,
+   "sdM": 43.8888
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO101_401-22590005",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO101_401",
+   "epoch": "2025-03-09T00:26:44.659Z",
+   "recordNumber": 22590005,
+   "hzDeg": 329.16208,
+   "vzDeg": 88.52666,
+   "sdM": 42.7593
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO102_402-22590006",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO102_402",
+   "epoch": "2025-03-09T00:32:22.048Z",
+   "recordNumber": 22590006,
+   "hzDeg": 356.55237,
+   "vzDeg": 88.07387,
+   "sdM": 59.5049
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO103_403-22590007",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO103_403",
+   "epoch": "2025-03-09T00:32:24.842Z",
+   "recordNumber": 22590007,
+   "hzDeg": 324.00145,
+   "vzDeg": 88.66278,
+   "sdM": 72.811
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO104_404-22590008",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO104_404",
+   "epoch": "2025-03-09T00:30:58.623Z",
+   "recordNumber": 22590008,
+   "hzDeg": 20.8019,
+   "vzDeg": 88.36115,
+   "sdM": 48.939
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_329-22590009",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_329",
+   "epoch": "2025-03-09T04:26:58.821Z",
+   "recordNumber": 22590009,
+   "hzDeg": 111.90202,
+   "vzDeg": 90.96996,
+   "sdM": 81.4346
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_335-22590010",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_335",
+   "epoch": "2025-03-09T04:28:47.836Z",
+   "recordNumber": 22590010,
+   "hzDeg": 119.05329,
+   "vzDeg": 91.24772,
+   "sdM": 66.8289
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_341-22590011",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_341",
+   "epoch": "2025-03-09T04:27:54.896Z",
+   "recordNumber": 22590011,
+   "hzDeg": 130.91302,
+   "vzDeg": 91.64568,
+   "sdM": 52.9528
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_347-22590012",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_347",
+   "epoch": "2025-03-09T04:33:33.359Z",
+   "recordNumber": 22590012,
+   "hzDeg": 148.91065,
+   "vzDeg": 92.18769,
+   "sdM": 41.3533
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_360-22590013",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_360",
+   "epoch": "2025-03-09T04:27:38.094Z",
+   "recordNumber": 22590013,
+   "hzDeg": 203.94583,
+   "vzDeg": 92.31334,
+   "sdM": 43.8886
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO101_401-22590014",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO101_401",
+   "epoch": "2025-03-09T04:28:24.244Z",
+   "recordNumber": 22590014,
+   "hzDeg": 329.16244,
+   "vzDeg": 88.52589,
+   "sdM": 42.7598
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO102_402-22590015",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO102_402",
+   "epoch": "2025-03-09T04:32:51.182Z",
+   "recordNumber": 22590015,
+   "hzDeg": 356.55311,
+   "vzDeg": 88.07417,
+   "sdM": 59.5066
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO103_403-22590016",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO103_403",
+   "epoch": "2025-03-09T04:30:11.276Z",
+   "recordNumber": 22590016,
+   "hzDeg": 324.00031,
+   "vzDeg": 88.66171,
+   "sdM": 72.8115
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO104_404-22590017",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO104_404",
+   "epoch": "2025-03-09T04:33:29.027Z",
+   "recordNumber": 22590017,
+   "hzDeg": 20.80203,
+   "vzDeg": 88.36084,
+   "sdM": 48.9385
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_329-22590027",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_329",
+   "epoch": "2025-03-09T12:27:13.944Z",
+   "recordNumber": 22590027,
+   "hzDeg": 111.90212,
+   "vzDeg": 90.97034,
+   "sdM": 81.4348
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_335-22590028",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_335",
+   "epoch": "2025-03-09T12:29:52.057Z",
+   "recordNumber": 22590028,
+   "hzDeg": 119.05331,
+   "vzDeg": 91.24754,
+   "sdM": 66.8291
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_341-22590029",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_341",
+   "epoch": "2025-03-09T12:30:29.570Z",
+   "recordNumber": 22590029,
+   "hzDeg": 130.91361,
+   "vzDeg": 91.64554,
+   "sdM": 52.9528
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_347-22590030",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_347",
+   "epoch": "2025-03-09T12:33:36.305Z",
+   "recordNumber": 22590030,
+   "hzDeg": 148.91078,
+   "vzDeg": 92.18824,
+   "sdM": 41.3529
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_360-22590031",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_360",
+   "epoch": "2025-03-09T12:28:56.706Z",
+   "recordNumber": 22590031,
+   "hzDeg": 203.94664,
+   "vzDeg": 92.31356,
+   "sdM": 43.8886
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO101_401-22590032",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO101_401",
+   "epoch": "2025-03-09T12:27:07.052Z",
+   "recordNumber": 22590032,
+   "hzDeg": 329.1623,
+   "vzDeg": 88.52742,
+   "sdM": 42.7606
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO102_402-22590033",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO102_402",
+   "epoch": "2025-03-09T12:28:19.431Z",
+   "recordNumber": 22590033,
+   "hzDeg": 356.55333,
+   "vzDeg": 88.07427,
+   "sdM": 59.5063
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO103_403-22590034",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO103_403",
+   "epoch": "2025-03-09T12:33:06.607Z",
+   "recordNumber": 22590034,
+   "hzDeg": 324.00036,
+   "vzDeg": 88.66248,
+   "sdM": 72.8123
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO104_404-22590035",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO104_404",
+   "epoch": "2025-03-09T12:27:06.142Z",
+   "recordNumber": 22590035,
+   "hzDeg": 20.8016,
+   "vzDeg": 88.36014,
+   "sdM": 48.9388
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_329-22590036",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_329",
+   "epoch": "2025-03-09T16:31:45.940Z",
+   "recordNumber": 22590036,
+   "hzDeg": 111.90206,
+   "vzDeg": 90.97028,
+   "sdM": 81.4346
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_335-22590037",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_335",
+   "epoch": "2025-03-09T16:32:16.573Z",
+   "recordNumber": 22590037,
+   "hzDeg": 119.05361,
+   "vzDeg": 91.24664,
+   "sdM": 66.8307
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_341-22590038",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_341",
+   "epoch": "2025-03-09T16:29:13.624Z",
+   "recordNumber": 22590038,
+   "hzDeg": 130.91348,
+   "vzDeg": 91.64666,
+   "sdM": 52.9581
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_347-22590039",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_347",
+   "epoch": "2025-03-09T16:29:54.121Z",
+   "recordNumber": 22590039,
+   "hzDeg": 148.91153,
+   "vzDeg": 92.18904,
+   "sdM": 41.3524
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_360-22590040",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_360",
+   "epoch": "2025-03-09T16:33:41.634Z",
+   "recordNumber": 22590040,
+   "hzDeg": 203.94658,
+   "vzDeg": 92.31324,
+   "sdM": 43.8872
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO101_401-22590041",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO101_401",
+   "epoch": "2025-03-09T16:28:51.896Z",
+   "recordNumber": 22590041,
+   "hzDeg": 329.16221,
+   "vzDeg": 88.52505,
+   "sdM": 42.7624
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO102_402-22590042",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO102_402",
+   "epoch": "2025-03-09T16:28:37.645Z",
+   "recordNumber": 22590042,
+   "hzDeg": 356.55304,
+   "vzDeg": 88.07437,
+   "sdM": 59.509
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO103_403-22590043",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO103_403",
+   "epoch": "2025-03-09T16:30:35.808Z",
+   "recordNumber": 22590043,
+   "hzDeg": 324.00072,
+   "vzDeg": 88.66257,
+   "sdM": 72.8127
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO104_404-22590044",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO104_404",
+   "epoch": "2025-03-09T16:33:21.029Z",
+   "recordNumber": 22590044,
+   "hzDeg": 20.80119,
+   "vzDeg": 88.36045,
+   "sdM": 48.9396
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_329-22590045",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_329",
+   "epoch": "2025-03-09T20:30:21.507Z",
+   "recordNumber": 22590045,
+   "hzDeg": 111.90207,
+   "vzDeg": 90.97109,
+   "sdM": 81.4375
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_335-22590046",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_335",
+   "epoch": "2025-03-09T20:26:44.610Z",
+   "recordNumber": 22590046,
+   "hzDeg": 119.05287,
+   "vzDeg": 91.24595,
+   "sdM": 66.8297
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_341-22590047",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_341",
+   "epoch": "2025-03-09T20:32:28.447Z",
+   "recordNumber": 22590047,
+   "hzDeg": 130.91369,
+   "vzDeg": 91.64476,
+   "sdM": 52.9512
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_347-22590048",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_347",
+   "epoch": "2025-03-09T20:29:30.511Z",
+   "recordNumber": 22590048,
+   "hzDeg": 148.91028,
+   "vzDeg": 92.1878,
+   "sdM": 41.3528
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_360-22590049",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_360",
+   "epoch": "2025-03-09T20:28:03.599Z",
+   "recordNumber": 22590049,
+   "hzDeg": 203.94707,
+   "vzDeg": 92.31329,
+   "sdM": 43.8872
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO101_401-22590050",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO101_401",
+   "epoch": "2025-03-09T20:28:57.154Z",
+   "recordNumber": 22590050,
+   "hzDeg": 329.16259,
+   "vzDeg": 88.52649,
+   "sdM": 42.7637
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO102_402-22590051",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO102_402",
+   "epoch": "2025-03-09T20:26:43.345Z",
+   "recordNumber": 22590051,
+   "hzDeg": 356.55344,
+   "vzDeg": 88.07408,
+   "sdM": 59.5081
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO103_403-22590052",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO103_403",
+   "epoch": "2025-03-09T20:33:01.839Z",
+   "recordNumber": 22590052,
+   "hzDeg": 324.00091,
+   "vzDeg": 88.66255,
+   "sdM": 72.8128
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO104_404-22590053",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO104_404",
+   "epoch": "2025-03-09T20:31:15.151Z",
+   "recordNumber": 22590053,
+   "hzDeg": 20.80129,
+   "vzDeg": 88.36065,
+   "sdM": 48.9382
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_329-22590054",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_329",
+   "epoch": "2025-03-10T00:32:00.847Z",
+   "recordNumber": 22590054,
+   "hzDeg": 111.90136,
+   "vzDeg": 90.96919,
+   "sdM": 81.4357
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_335-22590055",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_335",
+   "epoch": "2025-03-10T00:27:17.595Z",
+   "recordNumber": 22590055,
+   "hzDeg": 119.05354,
+   "vzDeg": 91.24631,
+   "sdM": 66.831
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_341-22590056",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_341",
+   "epoch": "2025-03-10T00:31:13.409Z",
+   "recordNumber": 22590056,
+   "hzDeg": 130.91326,
+   "vzDeg": 91.64507,
+   "sdM": 52.9498
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_347-22590057",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_347",
+   "epoch": "2025-03-10T00:32:00.809Z",
+   "recordNumber": 22590057,
+   "hzDeg": 148.91131,
+   "vzDeg": 92.18759,
+   "sdM": 41.3528
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_360-22590058",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_360",
+   "epoch": "2025-03-10T00:26:46.985Z",
+   "recordNumber": 22590058,
+   "hzDeg": 203.94622,
+   "vzDeg": 92.31318,
+   "sdM": 43.8878
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO101_401-22590059",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO101_401",
+   "epoch": "2025-03-10T00:29:00.199Z",
+   "recordNumber": 22590059,
+   "hzDeg": 329.16165,
+   "vzDeg": 88.52725,
+   "sdM": 42.7613
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO102_402-22590060",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO102_402",
+   "epoch": "2025-03-10T00:32:51.839Z",
+   "recordNumber": 22590060,
+   "hzDeg": 356.55374,
+   "vzDeg": 88.07357,
+   "sdM": 59.5061
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO103_403-22590061",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO103_403",
+   "epoch": "2025-03-10T00:29:02.508Z",
+   "recordNumber": 22590061,
+   "hzDeg": 324.00126,
+   "vzDeg": 88.66263,
+   "sdM": 72.8101
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO104_404-22590062",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO104_404",
+   "epoch": "2025-03-10T00:32:29.942Z",
+   "recordNumber": 22590062,
+   "hzDeg": 20.80185,
+   "vzDeg": 88.36095,
+   "sdM": 48.9387
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_329-22590063",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_329",
+   "epoch": "2025-03-10T04:29:27.297Z",
+   "recordNumber": 22590063,
+   "hzDeg": 111.90102,
+   "vzDeg": 90.97103,
+   "sdM": 81.4373
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_335-22590064",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_335",
+   "epoch": "2025-03-10T04:33:00.730Z",
+   "recordNumber": 22590064,
+   "hzDeg": 119.05371,
+   "vzDeg": 91.24535,
+   "sdM": 66.8313
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_341-22590065",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_341",
+   "epoch": "2025-03-10T04:29:14.436Z",
+   "recordNumber": 22590065,
+   "hzDeg": 130.91358,
+   "vzDeg": 91.64576,
+   "sdM": 52.95
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_347-22590066",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_347",
+   "epoch": "2025-03-10T04:31:56.256Z",
+   "recordNumber": 22590066,
+   "hzDeg": 148.91129,
+   "vzDeg": 92.18772,
+   "sdM": 41.3538
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_360-22590067",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_360",
+   "epoch": "2025-03-10T04:28:21.600Z",
+   "recordNumber": 22590067,
+   "hzDeg": 203.94584,
+   "vzDeg": 92.31305,
+   "sdM": 43.8881
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO101_401-22590068",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO101_401",
+   "epoch": "2025-03-10T04:31:47.473Z",
+   "recordNumber": 22590068,
+   "hzDeg": 329.16245,
+   "vzDeg": 88.52628,
+   "sdM": 42.7594
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO102_402-22590069",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO102_402",
+   "epoch": "2025-03-10T04:33:02.561Z",
+   "recordNumber": 22590069,
+   "hzDeg": 356.55419,
+   "vzDeg": 88.07385,
+   "sdM": 59.505
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO103_403-22590070",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO103_403",
+   "epoch": "2025-03-10T04:33:23.719Z",
+   "recordNumber": 22590070,
+   "hzDeg": 324.00127,
+   "vzDeg": 88.66221,
+   "sdM": 72.8127
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO104_404-22590071",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO104_404",
+   "epoch": "2025-03-10T04:32:59.926Z",
+   "recordNumber": 22590071,
+   "hzDeg": 20.80181,
+   "vzDeg": 88.36115,
+   "sdM": 48.939
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_329-22590072",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_329",
+   "epoch": "2025-03-10T08:31:24.495Z",
+   "recordNumber": 22590072,
+   "hzDeg": 111.90148,
+   "vzDeg": 90.9699,
+   "sdM": 81.4344
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_335-22590073",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_335",
+   "epoch": "2025-03-10T08:28:28.801Z",
+   "recordNumber": 22590073,
+   "hzDeg": 119.05375,
+   "vzDeg": 91.24769,
+   "sdM": 66.8297
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_341-22590074",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_341",
+   "epoch": "2025-03-10T08:30:28.596Z",
+   "recordNumber": 22590074,
+   "hzDeg": 130.91344,
+   "vzDeg": 91.64457,
+   "sdM": 52.9517
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_347-22590075",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_347",
+   "epoch": "2025-03-10T08:30:58.461Z",
+   "recordNumber": 22590075,
+   "hzDeg": 148.91136,
+   "vzDeg": 92.18756,
+   "sdM": 41.3542
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_360-22590076",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_360",
+   "epoch": "2025-03-10T08:31:20.015Z",
+   "recordNumber": 22590076,
+   "hzDeg": 203.94628,
+   "vzDeg": 92.31404,
+   "sdM": 43.8872
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO101_401-22590077",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO101_401",
+   "epoch": "2025-03-10T08:27:18.267Z",
+   "recordNumber": 22590077,
+   "hzDeg": 329.16238,
+   "vzDeg": 88.527,
+   "sdM": 42.7598
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO102_402-22590078",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO102_402",
+   "epoch": "2025-03-10T08:32:55.493Z",
+   "recordNumber": 22590078,
+   "hzDeg": 356.55329,
+   "vzDeg": 88.07487,
+   "sdM": 59.5066
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO103_403-22590079",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO103_403",
+   "epoch": "2025-03-10T08:29:34.772Z",
+   "recordNumber": 22590079,
+   "hzDeg": 324.00108,
+   "vzDeg": 88.66196,
+   "sdM": 72.8111
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO104_404-22590080",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO104_404",
+   "epoch": "2025-03-10T08:29:18.315Z",
+   "recordNumber": 22590080,
+   "hzDeg": 20.80097,
+   "vzDeg": 88.36089,
+   "sdM": 48.9385
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_329-22590081",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_329",
+   "epoch": "2025-03-10T12:27:06.025Z",
+   "recordNumber": 22590081,
+   "hzDeg": 111.90163,
+   "vzDeg": 90.96997,
+   "sdM": 81.4347
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_335-22590082",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_335",
+   "epoch": "2025-03-10T12:32:28.055Z",
+   "recordNumber": 22590082,
+   "hzDeg": 119.05325,
+   "vzDeg": 91.24607,
+   "sdM": 66.8298
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_341-22590083",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_341",
+   "epoch": "2025-03-10T12:28:10.866Z",
+   "recordNumber": 22590083,
+   "hzDeg": 130.91356,
+   "vzDeg": 91.64553,
+   "sdM": 52.9516
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_347-22590084",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_347",
+   "epoch": "2025-03-10T12:29:31.221Z",
+   "recordNumber": 22590084,
+   "hzDeg": 148.91146,
+   "vzDeg": 92.18879,
+   "sdM": 41.3516
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_360-22590085",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_360",
+   "epoch": "2025-03-10T12:30:35.871Z",
+   "recordNumber": 22590085,
+   "hzDeg": 203.94644,
+   "vzDeg": 92.31352,
+   "sdM": 43.8862
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO101_401-22590086",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO101_401",
+   "epoch": "2025-03-10T12:27:09.850Z",
+   "recordNumber": 22590086,
+   "hzDeg": 329.16265,
+   "vzDeg": 88.52747,
+   "sdM": 42.76
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO102_402-22590087",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO102_402",
+   "epoch": "2025-03-10T12:28:34.715Z",
+   "recordNumber": 22590087,
+   "hzDeg": 356.55344,
+   "vzDeg": 88.07324,
+   "sdM": 59.5063
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO103_403-22590088",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO103_403",
+   "epoch": "2025-03-10T12:31:38.668Z",
+   "recordNumber": 22590088,
+   "hzDeg": 324.00024,
+   "vzDeg": 88.66154,
+   "sdM": 72.8131
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO104_404-22590089",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO104_404",
+   "epoch": "2025-03-10T12:31:31.876Z",
+   "recordNumber": 22590089,
+   "hzDeg": 20.80149,
+   "vzDeg": 88.36103,
+   "sdM": 48.9372
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_329-22590090",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_329",
+   "epoch": "2025-03-10T16:33:00.703Z",
+   "recordNumber": 22590090,
+   "hzDeg": 111.90155,
+   "vzDeg": 90.97038,
+   "sdM": 81.4354
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_335-22590091",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_335",
+   "epoch": "2025-03-10T16:31:52.398Z",
+   "recordNumber": 22590091,
+   "hzDeg": 119.05398,
+   "vzDeg": 91.24611,
+   "sdM": 66.8291
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_341-22590092",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_341",
+   "epoch": "2025-03-10T16:26:49.400Z",
+   "recordNumber": 22590092,
+   "hzDeg": 130.91343,
+   "vzDeg": 91.64588,
+   "sdM": 52.9514
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_347-22590093",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_347",
+   "epoch": "2025-03-10T16:28:18.072Z",
+   "recordNumber": 22590093,
+   "hzDeg": 148.91118,
+   "vzDeg": 92.18793,
+   "sdM": 41.352
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_360-22590094",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_360",
+   "epoch": "2025-03-10T16:29:23.205Z",
+   "recordNumber": 22590094,
+   "hzDeg": 203.94619,
+   "vzDeg": 92.3137,
+   "sdM": 43.886
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO101_401-22590095",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO101_401",
+   "epoch": "2025-03-10T16:30:46.349Z",
+   "recordNumber": 22590095,
+   "hzDeg": 329.16261,
+   "vzDeg": 88.52681,
+   "sdM": 42.759
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO102_402-22590096",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO102_402",
+   "epoch": "2025-03-10T16:28:40.107Z",
+   "recordNumber": 22590096,
+   "hzDeg": 356.55304,
+   "vzDeg": 88.07495,
+   "sdM": 59.5073
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO103_403-22590097",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO103_403",
+   "epoch": "2025-03-10T16:29:40.092Z",
+   "recordNumber": 22590097,
+   "hzDeg": 324.00026,
+   "vzDeg": 88.66159,
+   "sdM": 72.8117
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO104_404-22590098",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO104_404",
+   "epoch": "2025-03-10T16:27:45.572Z",
+   "recordNumber": 22590098,
+   "hzDeg": 20.80176,
+   "vzDeg": 88.36074,
+   "sdM": 48.9376
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_329-22590099",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_329",
+   "epoch": "2025-03-10T20:28:59.550Z",
+   "recordNumber": 22590099,
+   "hzDeg": 111.90241,
+   "vzDeg": 90.97003,
+   "sdM": 81.4355
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_335-22590100",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_335",
+   "epoch": "2025-03-10T20:30:22.938Z",
+   "recordNumber": 22590100,
+   "hzDeg": 119.05297,
+   "vzDeg": 91.24686,
+   "sdM": 66.8311
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_341-22590101",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_341",
+   "epoch": "2025-03-10T20:27:24.233Z",
+   "recordNumber": 22590101,
+   "hzDeg": 130.91358,
+   "vzDeg": 91.64591,
+   "sdM": 52.9522
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_347-22590102",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_347",
+   "epoch": "2025-03-10T20:27:48.181Z",
+   "recordNumber": 22590102,
+   "hzDeg": 148.91127,
+   "vzDeg": 92.18744,
+   "sdM": 41.3524
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_360-22590103",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_360",
+   "epoch": "2025-03-10T20:27:50.786Z",
+   "recordNumber": 22590103,
+   "hzDeg": 203.94565,
+   "vzDeg": 92.3142,
+   "sdM": 43.8881
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO101_401-22590104",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO101_401",
+   "epoch": "2025-03-10T20:33:20.608Z",
+   "recordNumber": 22590104,
+   "hzDeg": 329.16175,
+   "vzDeg": 88.52544,
+   "sdM": 42.7594
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO102_402-22590105",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO102_402",
+   "epoch": "2025-03-10T20:32:50.599Z",
+   "recordNumber": 22590105,
+   "hzDeg": 356.55289,
+   "vzDeg": 88.07452,
+   "sdM": 59.5059
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO103_403-22590106",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO103_403",
+   "epoch": "2025-03-10T20:27:32.510Z",
+   "recordNumber": 22590106,
+   "hzDeg": 324.00081,
+   "vzDeg": 88.66216,
+   "sdM": 72.8115
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO104_404-22590107",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO104_404",
+   "epoch": "2025-03-10T20:27:46.299Z",
+   "recordNumber": 22590107,
+   "hzDeg": 20.80118,
+   "vzDeg": 88.36069,
+   "sdM": 48.9378
+  }
+ ],
+ "heldBackObservations": [
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_329-22590018",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_329",
+   "epoch": "2025-03-09T08:27:23.071Z",
+   "recordNumber": 22590018,
+   "hzDeg": 111.90199,
+   "vzDeg": 90.96975,
+   "sdM": 81.4363
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_335-22590019",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_335",
+   "epoch": "2025-03-09T08:33:29.588Z",
+   "recordNumber": 22590019,
+   "hzDeg": 119.05355,
+   "vzDeg": 91.2475,
+   "sdM": 66.8293
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_341-22590020",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_341",
+   "epoch": "2025-03-09T08:26:47.344Z",
+   "recordNumber": 22590020,
+   "hzDeg": 130.91326,
+   "vzDeg": 91.64477,
+   "sdM": 52.9518
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_347-22590021",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_347",
+   "epoch": "2025-03-09T08:27:12.503Z",
+   "recordNumber": 22590021,
+   "hzDeg": 148.91183,
+   "vzDeg": 92.18666,
+   "sdM": 41.3531
+  },
+  {
+   "id": "obs-NTE_ATS35-L35RE1100_360-22590022",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35RE1100_360",
+   "epoch": "2025-03-09T08:32:23.398Z",
+   "recordNumber": 22590022,
+   "hzDeg": 203.94617,
+   "vzDeg": 92.31351,
+   "sdM": 43.8896
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO101_401-22590023",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO101_401",
+   "epoch": "2025-03-09T08:28:43.044Z",
+   "recordNumber": 22590023,
+   "hzDeg": 329.16174,
+   "vzDeg": 88.52598,
+   "sdM": 42.76
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO102_402-22590024",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO102_402",
+   "epoch": "2025-03-09T08:31:52.077Z",
+   "recordNumber": 22590024,
+   "hzDeg": 356.55355,
+   "vzDeg": 88.07353,
+   "sdM": 59.5067
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO103_403-22590025",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO103_403",
+   "epoch": "2025-03-09T08:27:02.997Z",
+   "recordNumber": 22590025,
+   "hzDeg": 324.00108,
+   "vzDeg": 88.66307,
+   "sdM": 72.8107
+  },
+  {
+   "id": "obs-NTE_ATS35-L35MPO104_404-22590026",
+   "stationId": "NTE_ATS35",
+   "rawTargetName": "L35MPO104_404",
+   "epoch": "2025-03-09T08:28:12.573Z",
+   "recordNumber": 22590026,
+   "hzDeg": 20.80258,
+   "vzDeg": 88.35976,
+   "sdM": 48.9393
+  }
+ ],
+ "environment": [
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-08T23:04:00.000Z",
+   "temperatureC": 5.9,
+   "pressureHpa": 1006.46
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-08T23:14:00.000Z",
+   "temperatureC": 5.72,
+   "pressureHpa": 1007.77
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-08T23:24:00.000Z",
+   "temperatureC": 5.59,
+   "pressureHpa": 1008.46
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-08T23:34:00.000Z",
+   "temperatureC": 6.16,
+   "pressureHpa": 1007.7
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-08T23:44:00.000Z",
+   "temperatureC": 5.96,
+   "pressureHpa": 1007.7
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-08T23:54:00.000Z",
+   "temperatureC": 5.94,
+   "pressureHpa": 1007.31
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T00:04:00.000Z",
+   "temperatureC": 6.64,
+   "pressureHpa": 1008.54
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T00:14:00.000Z",
+   "temperatureC": 6.59,
+   "pressureHpa": 1007.54
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T00:24:00.000Z",
+   "temperatureC": 7.11,
+   "pressureHpa": 1009.15
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T00:34:00.000Z",
+   "temperatureC": 6.68,
+   "pressureHpa": 1007.77
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T00:44:00.000Z",
+   "temperatureC": 6.5,
+   "pressureHpa": 1008.5
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T00:54:00.000Z",
+   "temperatureC": 6.64,
+   "pressureHpa": 1008.33
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T01:04:00.000Z",
+   "temperatureC": 7.39,
+   "pressureHpa": 1007.66
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T01:14:00.000Z",
+   "temperatureC": 7.82,
+   "pressureHpa": 1009.26
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T01:24:00.000Z",
+   "temperatureC": 7.0,
+   "pressureHpa": 1007.83
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T01:34:00.000Z",
+   "temperatureC": 7.45,
+   "pressureHpa": 1008.08
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T01:44:00.000Z",
+   "temperatureC": 7.62,
+   "pressureHpa": 1007.37
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T01:54:00.000Z",
+   "temperatureC": 7.8,
+   "pressureHpa": 1009.62
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T02:04:00.000Z",
+   "temperatureC": 7.7,
+   "pressureHpa": 1008.64
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T02:14:00.000Z",
+   "temperatureC": 7.76,
+   "pressureHpa": 1009.15
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T02:24:00.000Z",
+   "temperatureC": 8.31,
+   "pressureHpa": 1009.85
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T02:34:00.000Z",
+   "temperatureC": 8.61,
+   "pressureHpa": 1008.75
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T02:44:00.000Z",
+   "temperatureC": 8.89,
+   "pressureHpa": 1008.73
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T02:54:00.000Z",
+   "temperatureC": 8.49,
+   "pressureHpa": 1009.18
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T03:04:00.000Z",
+   "temperatureC": 9.02,
+   "pressureHpa": 1009.16
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T03:14:00.000Z",
+   "temperatureC": 9.36,
+   "pressureHpa": 1008.87
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T03:24:00.000Z",
+   "temperatureC": 9.54,
+   "pressureHpa": 1010.03
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T03:34:00.000Z",
+   "temperatureC": 9.26,
+   "pressureHpa": 1010.07
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T03:44:00.000Z",
+   "temperatureC": 9.69,
+   "pressureHpa": 1008.86
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T03:54:00.000Z",
+   "temperatureC": 10.66,
+   "pressureHpa": 1009.36
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T04:04:00.000Z",
+   "temperatureC": 10.51,
+   "pressureHpa": 1009.72
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T04:14:00.000Z",
+   "temperatureC": 9.77,
+   "pressureHpa": 1009.4
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T04:24:00.000Z",
+   "temperatureC": 10.28,
+   "pressureHpa": 1008.7
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T04:34:00.000Z",
+   "temperatureC": 10.06,
+   "pressureHpa": 1009.45
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T04:44:00.000Z",
+   "temperatureC": 10.93,
+   "pressureHpa": 1009.61
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T04:54:00.000Z",
+   "temperatureC": 10.82,
+   "pressureHpa": 1009.04
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T05:04:00.000Z",
+   "temperatureC": 10.76,
+   "pressureHpa": 1009.18
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T05:14:00.000Z",
+   "temperatureC": 10.9,
+   "pressureHpa": 1009.37
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T05:24:00.000Z",
+   "temperatureC": 11.34,
+   "pressureHpa": 1009.03
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T05:34:00.000Z",
+   "temperatureC": 11.42,
+   "pressureHpa": 1009.11
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T05:44:00.000Z",
+   "temperatureC": 11.62,
+   "pressureHpa": 1009.75
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T05:54:00.000Z",
+   "temperatureC": 11.81,
+   "pressureHpa": 1009.74
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T06:04:00.000Z",
+   "temperatureC": 11.38,
+   "pressureHpa": 1009.31
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T06:14:00.000Z",
+   "temperatureC": 12.08,
+   "pressureHpa": 1009.82
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T06:24:00.000Z",
+   "temperatureC": 11.63,
+   "pressureHpa": 1009.57
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T06:34:00.000Z",
+   "temperatureC": 12.58,
+   "pressureHpa": 1009.39
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T06:44:00.000Z",
+   "temperatureC": 12.29,
+   "pressureHpa": 1009.7
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T06:54:00.000Z",
+   "temperatureC": 12.48,
+   "pressureHpa": 1009.8
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T07:04:00.000Z",
+   "temperatureC": 12.52,
+   "pressureHpa": 1009.52
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T07:14:00.000Z",
+   "temperatureC": 12.35,
+   "pressureHpa": 1009.34
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T07:24:00.000Z",
+   "temperatureC": 13.03,
+   "pressureHpa": 1009.3
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T07:34:00.000Z",
+   "temperatureC": 12.67,
+   "pressureHpa": 1009.13
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T07:44:00.000Z",
+   "temperatureC": 13.02,
+   "pressureHpa": 1008.92
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T07:54:00.000Z",
+   "temperatureC": 13.11,
+   "pressureHpa": 1008.85
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T08:04:00.000Z",
+   "temperatureC": 12.56,
+   "pressureHpa": 1009.39
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T08:14:00.000Z",
+   "temperatureC": 12.96,
+   "pressureHpa": 1009.4
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T08:24:00.000Z",
+   "temperatureC": 13.27,
+   "pressureHpa": 1009.01
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T08:34:00.000Z",
+   "temperatureC": 13.11,
+   "pressureHpa": 1008.72
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T08:44:00.000Z",
+   "temperatureC": 13.37,
+   "pressureHpa": 1009.45
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T08:54:00.000Z",
+   "temperatureC": 13.16,
+   "pressureHpa": 1009.18
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T09:04:00.000Z",
+   "temperatureC": 12.76,
+   "pressureHpa": 1008.88
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T09:14:00.000Z",
+   "temperatureC": 13.14,
+   "pressureHpa": 1008.98
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T09:24:00.000Z",
+   "temperatureC": 13.02,
+   "pressureHpa": 1008.26
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T09:34:00.000Z",
+   "temperatureC": 13.01,
+   "pressureHpa": 1008.55
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T09:44:00.000Z",
+   "temperatureC": 12.6,
+   "pressureHpa": 1008.76
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T09:54:00.000Z",
+   "temperatureC": 12.33,
+   "pressureHpa": 1009.13
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T10:04:00.000Z",
+   "temperatureC": 13.1,
+   "pressureHpa": 1008.7
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T10:14:00.000Z",
+   "temperatureC": 12.5,
+   "pressureHpa": 1008.2
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T10:24:00.000Z",
+   "temperatureC": 12.69,
+   "pressureHpa": 1007.4
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T10:34:00.000Z",
+   "temperatureC": 12.72,
+   "pressureHpa": 1008.88
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T10:44:00.000Z",
+   "temperatureC": 12.5,
+   "pressureHpa": 1008.24
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T10:54:00.000Z",
+   "temperatureC": 12.57,
+   "pressureHpa": 1008.6
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T11:04:00.000Z",
+   "temperatureC": 12.76,
+   "pressureHpa": 1008.37
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T11:14:00.000Z",
+   "temperatureC": 12.13,
+   "pressureHpa": 1008.07
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T11:24:00.000Z",
+   "temperatureC": 12.29,
+   "pressureHpa": 1009.01
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T11:34:00.000Z",
+   "temperatureC": 12.03,
+   "pressureHpa": 1007.64
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T11:44:00.000Z",
+   "temperatureC": 11.76,
+   "pressureHpa": 1007.06
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T11:54:00.000Z",
+   "temperatureC": 12.0,
+   "pressureHpa": 1007.36
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T16:04:00.000Z",
+   "temperatureC": 7.73,
+   "pressureHpa": 1007.86
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T16:14:00.000Z",
+   "temperatureC": 7.88,
+   "pressureHpa": 1006.08
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T16:24:00.000Z",
+   "temperatureC": 7.32,
+   "pressureHpa": 1006.75
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T16:34:00.000Z",
+   "temperatureC": 7.05,
+   "pressureHpa": 1007.79
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T16:44:00.000Z",
+   "temperatureC": 6.95,
+   "pressureHpa": 1006.92
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T16:54:00.000Z",
+   "temperatureC": 7.53,
+   "pressureHpa": 1006.51
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T17:04:00.000Z",
+   "temperatureC": 6.64,
+   "pressureHpa": 1006.41
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T17:14:00.000Z",
+   "temperatureC": 6.9,
+   "pressureHpa": 1006.97
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T17:24:00.000Z",
+   "temperatureC": 6.67,
+   "pressureHpa": 1005.82
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T17:34:00.000Z",
+   "temperatureC": 6.52,
+   "pressureHpa": 1006.17
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T17:44:00.000Z",
+   "temperatureC": 5.72,
+   "pressureHpa": 1006.15
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T17:54:00.000Z",
+   "temperatureC": 5.82,
+   "pressureHpa": 1006.79
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T18:04:00.000Z",
+   "temperatureC": 6.71,
+   "pressureHpa": 1007.43
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T18:14:00.000Z",
+   "temperatureC": 5.83,
+   "pressureHpa": 1006.27
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T18:24:00.000Z",
+   "temperatureC": 6.1,
+   "pressureHpa": 1007.04
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T18:34:00.000Z",
+   "temperatureC": 5.66,
+   "pressureHpa": 1006.45
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T18:44:00.000Z",
+   "temperatureC": 6.35,
+   "pressureHpa": 1006.47
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T18:54:00.000Z",
+   "temperatureC": 5.44,
+   "pressureHpa": 1006.6
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T19:04:00.000Z",
+   "temperatureC": 5.68,
+   "pressureHpa": 1006.05
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T19:14:00.000Z",
+   "temperatureC": 5.35,
+   "pressureHpa": 1005.99
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T19:24:00.000Z",
+   "temperatureC": 5.26,
+   "pressureHpa": 1007.54
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T19:34:00.000Z",
+   "temperatureC": 5.5,
+   "pressureHpa": 1006.58
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T19:44:00.000Z",
+   "temperatureC": 4.94,
+   "pressureHpa": 1006.5
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T19:54:00.000Z",
+   "temperatureC": 5.48,
+   "pressureHpa": 1006.4
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T20:04:00.000Z",
+   "temperatureC": 5.55,
+   "pressureHpa": 1006.03
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T20:14:00.000Z",
+   "temperatureC": 4.99,
+   "pressureHpa": 1007.62
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T20:24:00.000Z",
+   "temperatureC": 4.45,
+   "pressureHpa": 1007.38
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T20:34:00.000Z",
+   "temperatureC": 4.47,
+   "pressureHpa": 1006.78
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T20:44:00.000Z",
+   "temperatureC": 4.96,
+   "pressureHpa": 1007.28
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T20:54:00.000Z",
+   "temperatureC": 4.06,
+   "pressureHpa": 1005.95
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T21:04:00.000Z",
+   "temperatureC": 4.83,
+   "pressureHpa": 1006.98
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T21:14:00.000Z",
+   "temperatureC": 4.74,
+   "pressureHpa": 1006.9
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T21:24:00.000Z",
+   "temperatureC": 4.67,
+   "pressureHpa": 1006.86
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T21:34:00.000Z",
+   "temperatureC": 4.79,
+   "pressureHpa": 1007.23
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T21:44:00.000Z",
+   "temperatureC": 5.25,
+   "pressureHpa": 1007.88
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T21:54:00.000Z",
+   "temperatureC": 4.91,
+   "pressureHpa": 1007.06
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T22:04:00.000Z",
+   "temperatureC": 5.17,
+   "pressureHpa": 1007.13
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T22:14:00.000Z",
+   "temperatureC": 5.19,
+   "pressureHpa": 1006.55
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T22:24:00.000Z",
+   "temperatureC": 5.38,
+   "pressureHpa": 1006.93
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T22:34:00.000Z",
+   "temperatureC": 5.04,
+   "pressureHpa": 1006.66
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T22:44:00.000Z",
+   "temperatureC": 5.75,
+   "pressureHpa": 1007.44
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T22:54:00.000Z",
+   "temperatureC": 5.83,
+   "pressureHpa": 1007.71
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T23:04:00.000Z",
+   "temperatureC": 5.06,
+   "pressureHpa": 1007.1
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T23:14:00.000Z",
+   "temperatureC": 5.89,
+   "pressureHpa": 1007.32
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T23:24:00.000Z",
+   "temperatureC": 5.44,
+   "pressureHpa": 1007.68
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T23:34:00.000Z",
+   "temperatureC": 5.82,
+   "pressureHpa": 1007.32
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T23:44:00.000Z",
+   "temperatureC": 5.88,
+   "pressureHpa": 1007.66
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-09T23:54:00.000Z",
+   "temperatureC": 5.32,
+   "pressureHpa": 1008.21
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T00:04:00.000Z",
+   "temperatureC": 5.98,
+   "pressureHpa": 1008.68
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T00:14:00.000Z",
+   "temperatureC": 6.0,
+   "pressureHpa": 1007.3
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T00:24:00.000Z",
+   "temperatureC": 6.84,
+   "pressureHpa": 1007.36
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T00:34:00.000Z",
+   "temperatureC": 6.43,
+   "pressureHpa": 1008.52
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T00:44:00.000Z",
+   "temperatureC": 6.66,
+   "pressureHpa": 1007.46
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T00:54:00.000Z",
+   "temperatureC": 6.97,
+   "pressureHpa": 1008.25
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T01:04:00.000Z",
+   "temperatureC": 7.45,
+   "pressureHpa": 1008.71
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T01:14:00.000Z",
+   "temperatureC": 8.13,
+   "pressureHpa": 1007.65
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T01:24:00.000Z",
+   "temperatureC": 7.37,
+   "pressureHpa": 1008.0
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T01:34:00.000Z",
+   "temperatureC": 7.88,
+   "pressureHpa": 1009.01
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T01:44:00.000Z",
+   "temperatureC": 7.92,
+   "pressureHpa": 1008.27
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T01:54:00.000Z",
+   "temperatureC": 7.64,
+   "pressureHpa": 1007.7
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T02:04:00.000Z",
+   "temperatureC": 8.55,
+   "pressureHpa": 1009.03
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T02:14:00.000Z",
+   "temperatureC": 8.12,
+   "pressureHpa": 1009.29
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T02:24:00.000Z",
+   "temperatureC": 8.6,
+   "pressureHpa": 1009.37
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T02:34:00.000Z",
+   "temperatureC": 8.06,
+   "pressureHpa": 1008.58
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T02:44:00.000Z",
+   "temperatureC": 8.78,
+   "pressureHpa": 1009.16
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T02:54:00.000Z",
+   "temperatureC": 9.18,
+   "pressureHpa": 1008.53
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T03:04:00.000Z",
+   "temperatureC": 9.11,
+   "pressureHpa": 1010.18
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T03:14:00.000Z",
+   "temperatureC": 9.45,
+   "pressureHpa": 1009.56
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T03:24:00.000Z",
+   "temperatureC": 9.41,
+   "pressureHpa": 1009.55
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T03:34:00.000Z",
+   "temperatureC": 10.13,
+   "pressureHpa": 1009.26
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T03:44:00.000Z",
+   "temperatureC": 10.13,
+   "pressureHpa": 1008.81
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T03:54:00.000Z",
+   "temperatureC": 10.11,
+   "pressureHpa": 1009.73
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T04:04:00.000Z",
+   "temperatureC": 9.88,
+   "pressureHpa": 1009.86
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T04:14:00.000Z",
+   "temperatureC": 10.07,
+   "pressureHpa": 1008.94
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T04:24:00.000Z",
+   "temperatureC": 10.43,
+   "pressureHpa": 1010.34
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T04:34:00.000Z",
+   "temperatureC": 10.69,
+   "pressureHpa": 1009.86
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T04:44:00.000Z",
+   "temperatureC": 10.53,
+   "pressureHpa": 1009.46
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T04:54:00.000Z",
+   "temperatureC": 10.56,
+   "pressureHpa": 1009.15
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T05:04:00.000Z",
+   "temperatureC": 11.31,
+   "pressureHpa": 1009.44
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T05:14:00.000Z",
+   "temperatureC": 11.64,
+   "pressureHpa": 1009.37
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T05:24:00.000Z",
+   "temperatureC": 11.29,
+   "pressureHpa": 1010.12
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T05:34:00.000Z",
+   "temperatureC": 11.3,
+   "pressureHpa": 1008.73
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T05:44:00.000Z",
+   "temperatureC": 12.01,
+   "pressureHpa": 1009.7
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T05:54:00.000Z",
+   "temperatureC": 11.1,
+   "pressureHpa": 1009.52
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T06:04:00.000Z",
+   "temperatureC": 11.76,
+   "pressureHpa": 1010.37
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T06:14:00.000Z",
+   "temperatureC": 11.78,
+   "pressureHpa": 1009.21
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T06:24:00.000Z",
+   "temperatureC": 11.84,
+   "pressureHpa": 1008.96
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T06:34:00.000Z",
+   "temperatureC": 12.01,
+   "pressureHpa": 1008.77
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T06:44:00.000Z",
+   "temperatureC": 12.01,
+   "pressureHpa": 1008.67
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T06:54:00.000Z",
+   "temperatureC": 11.96,
+   "pressureHpa": 1008.68
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T07:04:00.000Z",
+   "temperatureC": 12.34,
+   "pressureHpa": 1009.1
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T07:14:00.000Z",
+   "temperatureC": 12.21,
+   "pressureHpa": 1009.66
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T07:24:00.000Z",
+   "temperatureC": 12.64,
+   "pressureHpa": 1009.18
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T07:34:00.000Z",
+   "temperatureC": 12.58,
+   "pressureHpa": 1010.17
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T07:44:00.000Z",
+   "temperatureC": 12.85,
+   "pressureHpa": 1009.59
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T07:54:00.000Z",
+   "temperatureC": 12.06,
+   "pressureHpa": 1008.99
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T08:04:00.000Z",
+   "temperatureC": 12.23,
+   "pressureHpa": 1009.07
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T08:14:00.000Z",
+   "temperatureC": 13.03,
+   "pressureHpa": 1008.91
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T08:24:00.000Z",
+   "temperatureC": 13.11,
+   "pressureHpa": 1008.7
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T08:34:00.000Z",
+   "temperatureC": 13.15,
+   "pressureHpa": 1008.4
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T08:44:00.000Z",
+   "temperatureC": 12.91,
+   "pressureHpa": 1009.34
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T08:54:00.000Z",
+   "temperatureC": 13.16,
+   "pressureHpa": 1009.02
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T09:04:00.000Z",
+   "temperatureC": 13.58,
+   "pressureHpa": 1008.83
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T09:14:00.000Z",
+   "temperatureC": 12.86,
+   "pressureHpa": 1007.61
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T09:24:00.000Z",
+   "temperatureC": 13.51,
+   "pressureHpa": 1008.76
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T09:34:00.000Z",
+   "temperatureC": 12.6,
+   "pressureHpa": 1009.55
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T09:44:00.000Z",
+   "temperatureC": 13.3,
+   "pressureHpa": 1008.89
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T09:54:00.000Z",
+   "temperatureC": 12.46,
+   "pressureHpa": 1008.99
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T10:04:00.000Z",
+   "temperatureC": 12.66,
+   "pressureHpa": 1008.14
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T10:14:00.000Z",
+   "temperatureC": 13.11,
+   "pressureHpa": 1007.6
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T10:24:00.000Z",
+   "temperatureC": 12.9,
+   "pressureHpa": 1008.84
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T10:34:00.000Z",
+   "temperatureC": 13.28,
+   "pressureHpa": 1008.71
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T10:44:00.000Z",
+   "temperatureC": 11.98,
+   "pressureHpa": 1008.07
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T10:54:00.000Z",
+   "temperatureC": 12.53,
+   "pressureHpa": 1008.6
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T11:04:00.000Z",
+   "temperatureC": 12.72,
+   "pressureHpa": 1007.38
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T11:14:00.000Z",
+   "temperatureC": 12.24,
+   "pressureHpa": 1008.78
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T11:24:00.000Z",
+   "temperatureC": 12.7,
+   "pressureHpa": 1009.17
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T11:34:00.000Z",
+   "temperatureC": 12.01,
+   "pressureHpa": 1008.72
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T11:44:00.000Z",
+   "temperatureC": 12.53,
+   "pressureHpa": 1008.7
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T11:54:00.000Z",
+   "temperatureC": 12.12,
+   "pressureHpa": 1008.45
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T12:04:00.000Z",
+   "temperatureC": 11.54,
+   "pressureHpa": 1007.25
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T12:14:00.000Z",
+   "temperatureC": 11.95,
+   "pressureHpa": 1007.73
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T12:24:00.000Z",
+   "temperatureC": 11.51,
+   "pressureHpa": 1007.55
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T12:34:00.000Z",
+   "temperatureC": 11.26,
+   "pressureHpa": 1007.89
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T12:44:00.000Z",
+   "temperatureC": 10.93,
+   "pressureHpa": 1007.75
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T12:54:00.000Z",
+   "temperatureC": 11.16,
+   "pressureHpa": 1007.61
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T13:04:00.000Z",
+   "temperatureC": 10.72,
+   "pressureHpa": 1007.98
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T13:14:00.000Z",
+   "temperatureC": 11.35,
+   "pressureHpa": 1007.22
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T13:24:00.000Z",
+   "temperatureC": 11.0,
+   "pressureHpa": 1007.91
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T13:34:00.000Z",
+   "temperatureC": 9.67,
+   "pressureHpa": 1007.02
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T13:44:00.000Z",
+   "temperatureC": 10.11,
+   "pressureHpa": 1007.73
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T13:54:00.000Z",
+   "temperatureC": 10.19,
+   "pressureHpa": 1007.52
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T14:04:00.000Z",
+   "temperatureC": 10.16,
+   "pressureHpa": 1006.78
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T14:14:00.000Z",
+   "temperatureC": 9.57,
+   "pressureHpa": 1006.56
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T14:24:00.000Z",
+   "temperatureC": 9.57,
+   "pressureHpa": 1007.06
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T14:34:00.000Z",
+   "temperatureC": 9.5,
+   "pressureHpa": 1006.7
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T14:44:00.000Z",
+   "temperatureC": 9.55,
+   "pressureHpa": 1007.47
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T14:54:00.000Z",
+   "temperatureC": 9.57,
+   "pressureHpa": 1007.32
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T15:04:00.000Z",
+   "temperatureC": 8.99,
+   "pressureHpa": 1007.26
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T15:14:00.000Z",
+   "temperatureC": 8.94,
+   "pressureHpa": 1006.55
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T15:24:00.000Z",
+   "temperatureC": 8.97,
+   "pressureHpa": 1007.69
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T15:34:00.000Z",
+   "temperatureC": 9.0,
+   "pressureHpa": 1006.81
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T15:44:00.000Z",
+   "temperatureC": 8.33,
+   "pressureHpa": 1006.96
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T15:54:00.000Z",
+   "temperatureC": 8.07,
+   "pressureHpa": 1007.03
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T16:04:00.000Z",
+   "temperatureC": 7.86,
+   "pressureHpa": 1006.59
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T16:14:00.000Z",
+   "temperatureC": 8.26,
+   "pressureHpa": 1006.74
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T16:24:00.000Z",
+   "temperatureC": 7.59,
+   "pressureHpa": 1007.07
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T16:34:00.000Z",
+   "temperatureC": 7.45,
+   "pressureHpa": 1006.75
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T16:44:00.000Z",
+   "temperatureC": 7.23,
+   "pressureHpa": 1005.97
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T16:54:00.000Z",
+   "temperatureC": 7.08,
+   "pressureHpa": 1005.99
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T17:04:00.000Z",
+   "temperatureC": 7.0,
+   "pressureHpa": 1005.95
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T17:14:00.000Z",
+   "temperatureC": 7.07,
+   "pressureHpa": 1006.9
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T17:24:00.000Z",
+   "temperatureC": 6.73,
+   "pressureHpa": 1006.47
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T17:34:00.000Z",
+   "temperatureC": 6.63,
+   "pressureHpa": 1005.53
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T17:44:00.000Z",
+   "temperatureC": 6.05,
+   "pressureHpa": 1006.43
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T17:54:00.000Z",
+   "temperatureC": 6.35,
+   "pressureHpa": 1006.46
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T18:04:00.000Z",
+   "temperatureC": 5.82,
+   "pressureHpa": 1006.57
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T18:14:00.000Z",
+   "temperatureC": 5.87,
+   "pressureHpa": 1005.97
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T18:24:00.000Z",
+   "temperatureC": 5.99,
+   "pressureHpa": 1006.4
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T18:34:00.000Z",
+   "temperatureC": 6.14,
+   "pressureHpa": 1006.85
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T18:44:00.000Z",
+   "temperatureC": 5.9,
+   "pressureHpa": 1006.69
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T18:54:00.000Z",
+   "temperatureC": 5.34,
+   "pressureHpa": 1006.07
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T19:04:00.000Z",
+   "temperatureC": 5.06,
+   "pressureHpa": 1008.0
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T19:14:00.000Z",
+   "temperatureC": 5.1,
+   "pressureHpa": 1006.47
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T19:24:00.000Z",
+   "temperatureC": 5.24,
+   "pressureHpa": 1006.46
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T19:34:00.000Z",
+   "temperatureC": 5.1,
+   "pressureHpa": 1005.69
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T19:44:00.000Z",
+   "temperatureC": 4.92,
+   "pressureHpa": 1005.96
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T19:54:00.000Z",
+   "temperatureC": 5.13,
+   "pressureHpa": 1006.34
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T20:04:00.000Z",
+   "temperatureC": 4.91,
+   "pressureHpa": 1006.82
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T20:14:00.000Z",
+   "temperatureC": 4.91,
+   "pressureHpa": 1007.22
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T20:24:00.000Z",
+   "temperatureC": 4.93,
+   "pressureHpa": 1006.9
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T20:34:00.000Z",
+   "temperatureC": 4.63,
+   "pressureHpa": 1007.15
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T20:44:00.000Z",
+   "temperatureC": 4.89,
+   "pressureHpa": 1007.07
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T20:54:00.000Z",
+   "temperatureC": 5.1,
+   "pressureHpa": 1006.83
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T21:04:00.000Z",
+   "temperatureC": 5.07,
+   "pressureHpa": 1006.77
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T21:14:00.000Z",
+   "temperatureC": 5.41,
+   "pressureHpa": 1007.47
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T21:24:00.000Z",
+   "temperatureC": 5.17,
+   "pressureHpa": 1006.47
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T21:34:00.000Z",
+   "temperatureC": 4.71,
+   "pressureHpa": 1006.78
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T21:44:00.000Z",
+   "temperatureC": 5.0,
+   "pressureHpa": 1007.39
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T21:54:00.000Z",
+   "temperatureC": 4.84,
+   "pressureHpa": 1007.8
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T22:04:00.000Z",
+   "temperatureC": 5.16,
+   "pressureHpa": 1006.27
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T22:14:00.000Z",
+   "temperatureC": 5.06,
+   "pressureHpa": 1006.04
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T22:24:00.000Z",
+   "temperatureC": 5.04,
+   "pressureHpa": 1007.12
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T22:34:00.000Z",
+   "temperatureC": 5.15,
+   "pressureHpa": 1007.29
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T22:44:00.000Z",
+   "temperatureC": 5.29,
+   "pressureHpa": 1007.21
+  },
+  {
+   "stationId": "NTE_ATS35",
+   "epoch": "2025-03-10T22:54:00.000Z",
+   "temperatureC": 5.94,
+   "pressureHpa": 1008.18
+  }
+ ],
+ "lookup": [
+  {
+   "RTS": "NTE_ATS35",
+   "TargetName": "L35RE1100_329",
+   "AdjustmentName": "L35RE1100_329",
+   "OutputName": "L35RE1100_329",
+   "TargetHeight": 0,
+   "PrismConstant": 0.0089,
+   "PrismType": "prism",
+   "PrismGrade": "",
+   "AdjustmentEnabled": true,
+   "GraphEnabled": false
+  },
+  {
+   "RTS": "NTE_ATS35",
+   "TargetName": "L35RE1100_335",
+   "AdjustmentName": "L35RE1100_335",
+   "OutputName": "L35RE1100_335",
+   "TargetHeight": 0,
+   "PrismConstant": 0.0089,
+   "PrismType": "prism",
+   "PrismGrade": "",
+   "AdjustmentEnabled": true,
+   "GraphEnabled": false
+  },
+  {
+   "RTS": "NTE_ATS35",
+   "TargetName": "L35RE1100_341",
+   "AdjustmentName": "L35RE1100_341",
+   "OutputName": "L35RE1100_341",
+   "TargetHeight": 0,
+   "PrismConstant": 0.0089,
+   "PrismType": "prism",
+   "PrismGrade": "",
+   "AdjustmentEnabled": true,
+   "GraphEnabled": false
+  },
+  {
+   "RTS": "NTE_ATS35",
+   "TargetName": "L35RE1100_347",
+   "AdjustmentName": "L35RE1100_347",
+   "OutputName": "L35RE1100_347",
+   "TargetHeight": 0,
+   "PrismConstant": 0.0089,
+   "PrismType": "prism",
+   "PrismGrade": "",
+   "AdjustmentEnabled": true,
+   "GraphEnabled": false
+  },
+  {
+   "RTS": "NTE_ATS35",
+   "TargetName": "L35RE1100_360",
+   "AdjustmentName": "L35RE1100_360",
+   "OutputName": "L35RE1100_360",
+   "TargetHeight": 0,
+   "PrismConstant": 0.0089,
+   "PrismType": "prism",
+   "PrismGrade": "",
+   "AdjustmentEnabled": true,
+   "GraphEnabled": false
+  },
+  {
+   "RTS": "NTE_ATS35",
+   "TargetName": "L35MPO101_401",
+   "AdjustmentName": "L35MPO101_401",
+   "OutputName": "L35MPO101_401",
+   "TargetHeight": 0,
+   "PrismConstant": 0.0089,
+   "PrismType": "prism",
+   "PrismGrade": "",
+   "AdjustmentEnabled": true,
+   "GraphEnabled": false
+  },
+  {
+   "RTS": "NTE_ATS35",
+   "TargetName": "L35MPO102_402",
+   "AdjustmentName": "L35MPO102_402",
+   "OutputName": "L35MPO102_402",
+   "TargetHeight": 0,
+   "PrismConstant": 0.0089,
+   "PrismType": "prism",
+   "PrismGrade": "",
+   "AdjustmentEnabled": true,
+   "GraphEnabled": false
+  },
+  {
+   "RTS": "NTE_ATS35",
+   "TargetName": "L35MPO103_403",
+   "AdjustmentName": "L35MPO103_403",
+   "OutputName": "L35MPO103_403",
+   "TargetHeight": 0,
+   "PrismConstant": 0.0089,
+   "PrismType": "prism",
+   "PrismGrade": "",
+   "AdjustmentEnabled": true,
+   "GraphEnabled": false
+  },
+  {
+   "RTS": "NTE_ATS35",
+   "TargetName": "L35MPO104_404",
+   "AdjustmentName": "L35MPO104_404",
+   "OutputName": "L35MPO104_404",
+   "TargetHeight": 0,
+   "PrismConstant": 0,
+   "PrismType": "reflectorless",
+   "PrismGrade": "",
+   "AdjustmentEnabled": true,
+   "GraphEnabled": false
+  }
+ ],
+ "header": [
+  {
+   "UsedFromCycle": "2025-03-09T00:00:00.000Z",
+   "Code": "C",
+   "PointId": "NTE_ATS35",
+   "Easting": 280498.0,
+   "Northing": 288548.0,
+   "Height": 32.1,
+   "StDevE": 0.1,
+   "StDevN": 0.1,
+   "StDevH": "*"
+  }
+ ]
+}
