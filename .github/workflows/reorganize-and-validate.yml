@@ -1,0 +1,13 @@
+name: Reorganize and validate project
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  documentation-only:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Validation is managed by the pull request workflow on main."
