@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import math
 import time
 from collections.abc import Mapping
 from typing import Any
@@ -27,6 +28,7 @@ def lambda_handler(event: Mapping[str, Any], context: Any) -> dict[str, Any]:
             "duration_ms": int((time.perf_counter() - started) * 1000),
             "result": result,
         }
+        response = _json_safe(response)
         _log("completed", request_id, operation=operation, duration_ms=response["duration_ms"])
         return _transport(response, 200, gateway)
     except (ContractError, KeyError, TypeError, ValueError) as error:
@@ -53,13 +55,27 @@ def lambda_handler(event: Mapping[str, Any], context: Any) -> dict[str, Any]:
 
 
 def _transport(payload: dict[str, Any], status_code: int, gateway: bool) -> dict[str, Any]:
+    safe = _json_safe(payload)
     if not gateway:
-        return {"statusCode": status_code, **payload}
+        return {"statusCode": status_code, **safe}
     return {
         "statusCode": status_code,
         "headers": {"Content-Type": "application/json"},
-        "body": json.dumps(payload, allow_nan=False, separators=(",", ":")),
+        "body": json.dumps(safe, allow_nan=False, separators=(",", ":")),
     }
+
+
+def _json_safe(value: Any) -> Any:
+    """Convert NumPy values and non-finite floats into AWS JSON-safe primitives."""
+    if isinstance(value, Mapping):
+        return {str(key): _json_safe(item) for key, item in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [_json_safe(item) for item in value]
+    if isinstance(value, float):
+        return value if math.isfinite(value) else None
+    if hasattr(value, "item"):
+        return _json_safe(value.item())
+    return value
 
 
 def _log(event: str, request_id: str, **fields: Any) -> None:
