@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - agent/reorganize-vercel-project
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -11,11 +14,11 @@ permissions:
 
 jobs:
   reorganize:
-    if: contains(join(github.event.commits.*.message, ' '), 'Add repository reorganization workflow') || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
           fetch-depth: 0
 
       - name: Extract project archive
@@ -81,11 +84,16 @@ jobs:
           fi
 
       - name: Commit reorganized repository
+        if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
         shell: bash
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
+          if git diff --cached --quiet; then
+            echo 'No repository changes to commit.'
+            exit 0
+          fi
           git commit -m "Reorganize project and validate Vercel build"
-          git push
+          git push origin HEAD:${{ github.event.pull_request.head.ref || github.ref_name }}
