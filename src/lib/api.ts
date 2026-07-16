@@ -3,21 +3,35 @@ import type { AuditEvent, Bootstrap, ProcessingSummary, RunDetail, RunSummary, V
 const BASE = (import.meta.env.VITE_API_BASE_URL || "/api").replace(/\/$/, "");
 
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
-  const response = await fetch(`${BASE}${path}`, {
-    headers: { "Content-Type": "application/json" },
-    ...init,
-  });
+  const url = `${BASE}${path}`;
+  let response: Response;
+  try {
+    response = await fetch(url, {
+      headers: { "Content-Type": "application/json" },
+      ...init,
+    });
+  } catch (error) {
+    throw new Error(`API inaccessible (${url}): ${error instanceof Error ? error.message : String(error)}`);
+  }
+
+  const contentType = response.headers.get("content-type") || "";
+  const isJson = contentType.includes("application/json");
+  if (!isJson) {
+    const text = await response.text();
+    const looksLikeHtml = text.trimStart().startsWith("<");
+    throw new Error(
+      looksLikeHtml
+        ? `La route API ${url} renvoie la page HTML du frontend. Vérifiez le routage Vercel /api.`
+        : `Réponse API invalide (${response.status}, ${contentType || "type inconnu"}).`,
+    );
+  }
+
+  const body = (await response.json()) as T | { detail?: unknown };
   if (!response.ok) {
-    let detail = `${response.status}`;
-    try {
-      const body = await response.json();
-      detail = body.detail ?? detail;
-    } catch {
-      /* keep status */
-    }
+    const detail = typeof body === "object" && body !== null && "detail" in body ? body.detail : response.status;
     throw new Error(typeof detail === "string" ? detail : JSON.stringify(detail));
   }
-  return response.json() as Promise<T>;
+  return body as T;
 }
 
 export const api = {
