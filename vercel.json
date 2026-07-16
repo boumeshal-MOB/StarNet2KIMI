@@ -4,9 +4,14 @@
   "installCommand": "npm ci",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "functions": {
+    "api/**/*.py": {
+      "excludeFiles": "{src/**,public/**,dist/**,node_modules/**,backend/tests/**,backend/scripts/**,.github/**}"
+    }
+  },
   "rewrites": [
     {
-      "source": "/((?!assets/|favicon\\.ico|robots\\.txt).*)",
+      "source": "/((?!api(?:/|$)|assets/|favicon\\.ico|robots\\.txt).*)",
       "destination": "/index.html"
     }
   ]
