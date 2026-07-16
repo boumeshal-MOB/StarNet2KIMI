@@ -1,6 +1,6 @@
 import type { AuditEvent, Bootstrap, ProcessingSummary, RunDetail, RunSummary, VersionPayload } from "./types";
 
-const BASE = "/api";
+const BASE = (import.meta.env.VITE_API_BASE_URL || "/api").replace(/\/$/, "");
 
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
   const response = await fetch(`${BASE}${path}`, {
