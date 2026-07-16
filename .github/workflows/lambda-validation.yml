@@ -1,0 +1,45 @@
+name: Validate BTM Lambda adapter
+
+on:
+  push:
+    branches:
+      - agent/btm-lambda-calculation
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  lambda-and-backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: |
+            backend/requirements.txt
+            backend/requirements-lambda.txt
+      - name: Install backend dependencies
+        run: pip install -r backend/requirements.txt
+      - name: Run backend and Lambda tests
+        env:
+          PYTHONPATH: backend:backend/core
+        run: python -m pytest backend/tests -q
+      - name: Build Lambda container
+        run: docker build -f Dockerfile.lambda -t btm-topographic-lambda:test .
+
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run build
