@@ -10,22 +10,25 @@ correction, frontend React sobre et bilingue FR/EN.
 app/
 ├── backend/                  # FastAPI + noyau scientifique Python
 │   ├── core/btm_topography/  # Moindres carrés 3D, corrections, initialisation, synchro (vendoré, testé)
+│   ├── lambda_app/           # Adaptateur AWS Lambda stateless et contrat BTM versionné
 │   ├── app/
 │   │   ├── models.py         # SQLite = base BTM simulée (raw_data, versions, runs, sorties)
 │   │   ├── seed.py           # Monde démo : ATS34 réel + ATS35 synthétique cohérent
-│   │   ├── services/engine.py# Pipeline : synchro → corrections → init → ajustement → STAR*NET → publication
+│   │   ├── services/engine.py# Pipeline démo : synchro → corrections → init → ajustement → publication
 │   │   ├── services/starnet/ # Package STAR*NET : build .dat/.prj, parse .pts/.err
 │   │   └── api/              # processings, versions, runs, analysis lab, demo
 │   ├── data/                 # ats34.generated.json (réel), ats35.generated.json (généré)
 │   ├── scripts/generate_ats35.py
-│   └── tests/                # 12 tests (moteur, STAR*NET, API)
+│   └── tests/                # moteur, STAR*NET, API et contrat Lambda
 ├── src/                      # React + TS + Tailwind + shadcn/ui
 │   ├── pages/                # Processings, Détail, Run, Analysis Lab, Wizard 9 étapes, Démo, Journal
 │   └── components/           # NetworkMap (ellipses 95 %), badges, layout
-└── Dockerfile                # Image unique : build frontend + uvicorn
+├── Dockerfile                # Image démo full-stack : build frontend + uvicorn
+├── Dockerfile.lambda         # Image AWS Lambda Python 3.12, sans FastAPI ni SQLite
+└── template.lambda.yaml      # Déploiement AWS SAM de la Lambda de calcul
 ```
 
-## Lancer
+## Lancer la maquette
 
 ```bash
 # Docker (tout-en-un)
@@ -35,6 +38,29 @@ docker build -t btm-topo . && docker run -p 8000:8000 btm-topo
 cd backend && pip install -r requirements.txt && uvicorn app.main:app --port 8000
 npm install && npm run dev        # proxy /api → :8000
 ```
+
+## Lambda de calcul BTM
+
+La Lambda est stateless : le backend BTM prépare un snapshot immuable avec la configuration,
+les observations et les mesures environnementales. La Lambda calcule et renvoie le résultat,
+les diagnostics, les valeurs X/Y/Z, DX/DY/DZ, SX/SY/SZ et les entrées STAR*NET. BTM reste
+responsable de la base de données, des runs, des droits et de la publication.
+
+```bash
+docker build -f Dockerfile.lambda -t btm-topographic-lambda .
+sam build -t template.lambda.yaml
+sam deploy --guided
+```
+
+Contrat : `btm.topographic-adjustment.lambda.v1`.
+Documentation détaillée : [`docs/BTM_LAMBDA_HANDOFF.md`](docs/BTM_LAMBDA_HANDOFF.md).
+
+Opérations principales :
+
+- `run-processing` : pipeline complet depuis un snapshot résolu par BTM ;
+- `calculate` : calcul sur des points et visées déjà préparés ;
+- `build-starnet-inputs` : génération réelle des fichiers `.dat` et `.prj` ;
+- `parse-starnet-outputs` : lecture des `.pts` et `.err` retournés par le futur worker Windows.
 
 ## Ce qui est démontré
 
@@ -48,11 +74,13 @@ npm install && npm run dev        # proxy /api → :8000
   erreur +8 mm sur référence redondante → exclusion par Auto Adjust (16:00) ; recalcul historique
   par période ; Analysis Lab (poids/exclusions d'essai, jamais en production) ; versions avec
   validité temporelle, activation, comparaison.
-- **STAR*NET** : fichiers `.dat`/`.prj` générés par run (visibles dans l'onglet dédié), `.pts`/`.err`
-  parsés en retour — la voie prête pour le worker Windows de production.
+- **STAR*NET** : fichiers `.dat`/`.prj` générés par run et par la Lambda, `.pts`/`.err` parsés en
+  retour. STAR*NET Ultimate reste destiné au worker Windows licencié contrôlé par BTM.
 
 ## Tests
 
 ```bash
-cd backend && python -m pytest tests/ -q   # 12 passed
+cd backend && python -m pytest tests/ -q
+npm run lint && npm run build
+docker build -f Dockerfile.lambda -t btm-topographic-lambda:test .
 ```
