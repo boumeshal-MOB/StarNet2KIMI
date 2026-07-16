@@ -26,9 +26,23 @@ jobs:
       - name: Install backend dependencies
         run: pip install -r backend/requirements.txt
       - name: Run backend and Lambda tests
+        id: backend-tests
+        continue-on-error: true
         env:
           PYTHONPATH: backend:backend/core
-        run: python -m pytest backend/tests -q
+        shell: bash
+        run: |
+          set -o pipefail
+          python -m pytest backend/tests -q 2>&1 | tee pytest.log
+      - name: Upload backend test log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: backend-test-log
+          path: pytest.log
+      - name: Fail when backend tests failed
+        if: steps.backend-tests.outcome == 'failure'
+        run: exit 1
       - name: Build Lambda container
         run: docker build -f Dockerfile.lambda -t btm-topographic-lambda:test .
 
