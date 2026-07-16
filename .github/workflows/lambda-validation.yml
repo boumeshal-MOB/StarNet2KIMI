@@ -45,4 +45,18 @@ jobs:
         continue-on-error: true
         run: npm run lint
       - name: Validate Vercel production build
-        run: npm run build
+        id: frontend-build
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -o pipefail
+          npm run build 2>&1 | tee frontend-build.log
+      - name: Upload frontend build log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-build-log
+          path: frontend-build.log
+      - name: Fail when frontend build failed
+        if: steps.frontend-build.outcome == 'failure'
+        run: exit 1
