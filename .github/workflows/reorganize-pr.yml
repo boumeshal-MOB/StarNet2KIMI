@@ -1,0 +1,96 @@
+name: Reorganize project PR
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  reorganize-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          fetch-depth: 0
+
+      - name: Extract project archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          archive="Kimi_Agent_GitHub 仓库导出.zip"
+          test -f "$archive"
+          rm -rf .extract
+          mkdir .extract
+          unzip -q "$archive" -d .extract
+
+          source_dir=".extract"
+          if [ -d ".extract/app" ]; then
+            source_dir=".extract/app"
+          elif [ "$(find .extract -mindepth 1 -maxdepth 1 -type d | wc -l)" -eq 1 ] && [ "$(find .extract -mindepth 1 -maxdepth 1 -type f | wc -l)" -eq 0 ]; then
+            source_dir="$(find .extract -mindepth 1 -maxdepth 1 -type d | head -n 1)"
+          fi
+
+          find "$source_dir" -mindepth 1 -maxdepth 1 -exec cp -a {} . \;
+          rm -rf .extract "$archive"
+
+      - name: Normalize repository files
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf .github/workflows/reorganize-and-validate.yml
+          find . -name '.DS_Store' -delete
+          if [ -d app ] && [ -f app/package.json ] && [ ! -f package.json ]; then
+            cp -a app/. .
+            rm -rf app
+          fi
+
+      - name: Install dependencies and validate
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -f pnpm-lock.yaml ]; then
+            corepack enable
+            pnpm install --frozen-lockfile
+            pnpm run lint --if-present
+            pnpm run test --if-present
+            pnpm run build
+          elif [ -f yarn.lock ]; then
+            corepack enable
+            yarn install --immutable || yarn install --frozen-lockfile
+            yarn lint --if-present
+            yarn test --if-present
+            yarn build
+          elif [ -f package-lock.json ]; then
+            npm ci
+            npm run lint --if-present
+            npm test --if-present
+            npm run build
+          elif [ -f package.json ]; then
+            npm install
+            npm run lint --if-present
+            npm test --if-present
+            npm run build
+          else
+            echo 'No package.json found after extraction.' >&2
+            exit 1
+          fi
+
+      - name: Commit reorganized project to PR branch
+        if: github.event.pull_request.head.repo.full_name == github.repository
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo 'No changes to commit.'
+            exit 0
+          fi
+          git commit -m "Reorganize project and validate Vercel build"
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}
