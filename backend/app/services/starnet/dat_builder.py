@@ -63,8 +63,8 @@ def build_dat(
             for axis in ("e", "n", "h")
         ]
         lines.append(
-            f"C   {names[point_id]}   {float(point['e']):.5f}   {float(point['n']):.5f}   "
-            f"{float(point['h']):.5f}   {tokens[0]}   {tokens[1]}   {tokens[2]}"
+            f"C {names[point_id]} {float(point['e']):.4f} {float(point['n']):.4f} "
+            f"{float(point['h']):.4f} {tokens[0]} {tokens[1]} {tokens[2]}"
         )
 
     lines.extend(["", f".SCALE {float(scale_factor):.12f}", ""])
@@ -88,9 +88,9 @@ def build_dat(
             hi = float(sight.get("instrument_height_m", 0.0))
             ht = float(sight.get("target_height_m", 0.0))
             lines.append(
-                f"DM  {target:<24} {_angle_dms(float(sight['hz_rad']))}  "
-                f"{float(sight['slope_distance_m']):.5f}  "
-                f"{_angle_dms(float(sight['vz_rad']))}  {hi:.3f}/{ht:.3f}"
+                f"DM {target} {_angle_dms(float(sight['hz_rad']))} "
+                f"{float(sight['slope_distance_m']):.5f} "
+                f"{_angle_dms(float(sight['vz_rad']))} {hi:.3f}/{ht:.3f}"
             )
         lines.extend(["DE", ""])
 
