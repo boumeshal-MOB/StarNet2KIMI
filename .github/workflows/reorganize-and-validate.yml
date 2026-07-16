@@ -17,11 +17,12 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Extract archive when present
+      - name: Extract archive and publish real repository
         shell: bash
         run: |
           set -euo pipefail
           archive="Kimi_Agent_GitHub 仓库导出.zip"
+
           if [ -f "$archive" ]; then
             rm -rf .extract
             mkdir .extract
@@ -39,9 +40,20 @@ jobs:
           fi
 
           find . -name '.DS_Store' -delete
+          rm -rf node_modules dist .next
+
           if [ -d app ] && [ -f app/package.json ] && [ ! -f package.json ]; then
             cp -a app/. .
             rm -rf app
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Extract project into repository root"
+            git push origin main
           fi
 
       - name: Install dependencies
@@ -63,7 +75,7 @@ jobs:
             exit 1
           fi
 
-      - name: Validate application
+      - name: Validate production build
         shell: bash
         run: |
           set -euo pipefail
@@ -80,17 +92,3 @@ jobs:
             npm test --if-present
             npm run build
           fi
-
-      - name: Commit extracted project
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          if git diff --cached --quiet; then
-            echo 'No repository changes to commit.'
-            exit 0
-          fi
-          git commit -m "Extract project and validate production build"
-          git push origin main
