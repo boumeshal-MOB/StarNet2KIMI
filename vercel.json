@@ -1,18 +1,10 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": "vite",
-  "installCommand": "npm ci",
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
+  "framework": "fastapi",
+  "buildCommand": "npm ci && npm run build",
   "functions": {
-    "api/**/*.py": {
-      "excludeFiles": "{src/**,public/**,dist/**,node_modules/**,backend/tests/**,backend/scripts/**,.github/**}"
+    "index.py": {
+      "maxDuration": 60
     }
-  },
-  "rewrites": [
-    {
-      "source": "/((?!api(?:/|$)|assets/|favicon\\.ico|robots\\.txt).*)",
-      "destination": "/index.html"
-    }
-  ]
+  }
 }
