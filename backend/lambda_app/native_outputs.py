@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import base64
+import re
 from collections.abc import Mapping
 from typing import Any
 
@@ -19,7 +20,8 @@ def parse_native_outputs(payload: Mapping[str, Any]) -> dict[str, Any]:
 
     `.PTS` remains the preferred source for full-precision coordinates. `.LST`
     enriches those coordinates with standard deviations, ellipses, residuals and
-    the Chi-square result. `.ERR` contributes warnings and fatal errors.
+    the Chi-square result. `.ERR` contributes warnings and fatal errors. An
+    explicit non-convergence reported by `.ERR` always remains authoritative.
     """
     pts_text = payload.get("pts")
     lst_text = payload.get("lst")
@@ -46,6 +48,11 @@ def parse_native_outputs(payload: Mapping[str, Any]) -> dict[str, Any]:
                     point[key] = listed[key]
 
     error_log = parse_err(err_text) if isinstance(err_text, str) and err_text.strip() else None
+    explicit_non_convergence = bool(
+        isinstance(err_text, str)
+        and re.search(r"(?im)^\s*CONVERGED\s+(?:NO|FALSE|0)\s*$", err_text)
+    )
+
     summary: dict[str, Any] = {}
     if error_log is not None:
         summary.update(error_log)
@@ -58,8 +65,10 @@ def parse_native_outputs(payload: Mapping[str, Any]) -> dict[str, Any]:
             summary["warning_count"] = error_log.get("warning_count", 0)
             summary["error_count"] = error_log.get("error_count", 0)
             summary["completed"] = error_log.get("completed", False)
-            if error_log.get("errors"):
-                summary["converged"] = False
+
+    if explicit_non_convergence or summary.get("errors"):
+        summary["converged"] = False
+
     summary.setdefault("warnings", [])
     summary.setdefault("errors", [])
     summary.setdefault("chi_square_status", "not-applicable")

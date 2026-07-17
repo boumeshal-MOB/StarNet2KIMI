@@ -1,8 +1,9 @@
 """STAR*NET adaptation layer used by the BTM calculation Lambda and worker."""
 
 from .dat_builder import build_dat
+from .dat_compat import parse_dat
 from .names import engine_name
-from .parsers import parse_dat, parse_err, parse_lst, parse_project, parse_pts
+from .parsers import parse_err, parse_lst, parse_project, parse_pts
 from .prj_builder import build_prj
 
 __all__ = [
