@@ -23,12 +23,31 @@ jobs:
           cache-dependency-path: |
             backend/requirements.txt
             backend/requirements-lambda.txt
+            requirements.txt
       - name: Install backend dependencies
         run: pip install -r backend/requirements.txt
       - name: Run backend and Lambda tests
         env:
           PYTHONPATH: backend:backend/core
         run: python -m pytest backend/tests -q
+      - name: Validate Vercel FastAPI entrypoint
+        env:
+          PYTHONPATH: .:backend:backend/core
+          VERCEL: '1'
+        run: |
+          python - <<'PY'
+          from fastapi.testclient import TestClient
+          from api.index import app
+
+          with TestClient(app) as client:
+              health = client.get('/api/health')
+              assert health.status_code == 200, health.text
+              assert health.headers['content-type'].startswith('application/json')
+              processings = client.get('/api/processings')
+              assert processings.status_code == 200, processings.text
+              assert processings.headers['content-type'].startswith('application/json')
+              assert isinstance(processings.json(), list)
+          PY
       - name: Build Lambda container
         run: docker build -f Dockerfile.lambda -t btm-topographic-lambda:test .
 

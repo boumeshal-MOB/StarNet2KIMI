@@ -10,6 +10,7 @@ from typing import Any
 
 from .calculator import execute
 from .contracts import CONTRACT_VERSION, ContractError, decode_event, validate_invocation
+from .native_outputs import parse_native_outputs
 
 
 def lambda_handler(event: Mapping[str, Any], context: Any) -> dict[str, Any]:
@@ -19,7 +20,11 @@ def lambda_handler(event: Mapping[str, Any], context: Any) -> dict[str, Any]:
     try:
         invocation, gateway = decode_event(event)
         request_id, operation, payload = validate_invocation(invocation)
-        result = execute(operation, payload)
+        result = (
+            parse_native_outputs(payload)
+            if operation == "parse-starnet-outputs"
+            else execute(operation, payload)
+        )
         response = {
             "ok": True,
             "contract_version": CONTRACT_VERSION,
